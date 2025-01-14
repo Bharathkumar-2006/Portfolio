@@ -33,7 +33,7 @@ const Home = () => {
       <section className="home" id="home">
           <div className="home-container">
               <img src="/my-portfolio/src/assets/react.svg" alt="Profile" className="profile-photo" />
-              <h1>Hi, Im Bharath Kumar</h1>
+              <h1>Hi, Im OneShot</h1>
               <p>Cybersecurity Enthusiast & Aspiring Ethical Hacker</p>
           </div>
       </section>
