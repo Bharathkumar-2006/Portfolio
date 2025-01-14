@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div>
+      <Navbar />
+      <About />
+    </div>
+  );
+}
+
+const Navbar = () => {
+  return (
+    <nav className="navbar">
+      <div className="navbar-logo">
+        <a href="#home">MyPortfolio</a>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      <ul className="navbar-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  );
+}
+
+const About = () => {
+    return (
+        <section className="about" id="about">
+            <div className="about-container">
+                <h1>About Me</h1>
+                <div className="about-content">
+                    <div className="about-text">
+                        <p>
+                            Hi, Im Bharath Kumar, a passionate Computer Science student with a keen interest in Cybersecurity, Networking, Linux, and Ethical Hacking. Im constantly exploring new technologies and deepening my understanding of Blockchain, Data Structures, and Algorithms.
+                        </p>
+                    </div>
+                    <div className="about-image">
+                        <img src="" alt="Bharath Kumar" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
 }
 
 export default App
