@@ -1,148 +1,186 @@
 /* Base Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: #6366f1;
+  --primary-dark: #4f46e5;
+  --secondary: #a855f7;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #2a2a72, #009ffd);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0f172a;
   color: #fff;
 }
 
-a {
-  text-decoration: none;
-  transition: color 0.3s ease;
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-button, input, textarea {
-  font-family: inherit;
+::-webkit-scrollbar-track {
+  background: #1e293b;
 }
 
-/* Navigation */
-nav {
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 5px;
 }
 
-nav a {
-  color: #fff;
-  padding: 0.5rem 1rem;
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
 }
 
-nav a:hover {
-  color: #ff6347;
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
-/* Hero Section */
-#home {
-  background: linear-gradient(135deg, #2a2a72, #009ffd);
-  color: #fff;
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }
 
-#home h1 {
-  font-size: 3rem;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-#home p {
-  font-size: 1.25rem;
-  margin-bottom: 1.5rem;
+/* Custom Classes */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }
 
-#home a {
-  padding: 0.75rem 1.5rem;
-  border-radius: 50px;
-  font-weight: bold;
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-#home a:hover {
-  transform: scale(1.05);
-}
-
-/* Section Styles */
-section {
-  padding: 4rem 2rem;
-}
-
-section h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2.5rem;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-section p {
-  text-align: justify;
-  line-height: 1.8;
-}
-
-.bg-white {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
-  border-radius: 15px;
-  padding: 2rem;
-}
-
-/* Project Cards */
-.grid {
-  display: grid;
-  gap: 2rem;
-}
-
-.grid div {
+.bg-glass {
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(5px);
-  border-radius: 15px;
-  padding: 1.5rem;
-  transition: transform 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.grid div:hover {
-  transform: translateY(-10px);
+/* Button Hover Effects */
+.button-hover {
+  position: relative;
+  overflow: hidden;
 }
 
-.grid div h3 {
-  font-size: 1.5rem;
-}
-
-/* Skill Bars */
-.bg-gray-200 {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.bg-indigo-600 {
-  background: #009ffd;
-}
-
-/* Form */
-form input, form textarea {
+.button-hover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  padding: 0.75rem;
-  margin-bottom: 1rem;
-  border: none;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
-  color: #fff;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: translateX(-100%);
+  transition: 0.5s;
 }
 
-form button {
-  background: #ff6347;
-  padding: 0.75rem 1.5rem;
-  border-radius: 50px;
-  font-weight: bold;
+.button-hover:hover::after {
+  transform: translateX(100%);
 }
 
-form button:hover {
-  transform: scale(1.05);
-  background: #ff4500;
+/* Project Card Hover Effects */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Social Icons */
-.social-icons a {
-  color: #fff;
-  margin: 0 0.5rem;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: #ff6347;
+.project-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Skill Bar Animation */
+.skill-bar {
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: shine 1.5s infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Form Input Focus Effects */
+.form-input:focus, .form-textarea:focus {
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+  outline: none;
+}
+
+/* Social Icons Hover Animation */
+.social-icon {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px) scale(1.1);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dark Mode Optimization */
+@media (prefers-color-scheme: dark) {
+  .bg-glass {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  
+  .form-input, .form-textarea {
+    background: rgba(0, 0, 0, 0.2);
+  }
 }
