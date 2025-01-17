@@ -8,16 +8,21 @@ import AppContext from './AppContext';
 import MainApp from './MainApp';
 import GlobalStyles from './theme/GlobalStyles';
 
-function App() {  
+function App() {
+  window.matchMedia = null;
+  const darkMode = useDarkMode(true);
+
   return (
-    
+    <AppContext.Provider value={{ darkMode }}>
+      <ThemeProvider theme={darkMode.value ? darkTheme : lightTheme}>
         <GlobalStyles />
         <div className="App">
           <BrowserRouter>
             <MainApp />
           </BrowserRouter>
         </div>
-      
+      </ThemeProvider>
+    </AppContext.Provider>
   );
 }
 
