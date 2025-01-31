@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import "./header.css";
 
 const Header = () => {
@@ -29,7 +29,7 @@ const Header = () => {
     return (
         <header className="header">
             <nav className="nav container">
-                <a href="#home" className="nav__logo">Chamith</a>
+                <a href="#home" className="nav__logo">Bharathkumar M</a>
 
                 <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
                     <ul className="nav__list grid">
@@ -46,11 +46,6 @@ const Header = () => {
                         <li className="nav__item">
                             <a href="#skills" className={`nav__link ${activeSection === 'skills' ? 'active' : ''}`} onClick={() => handleClick('skills')}>
                                 <i className="uil uil-file-alt nav__icon"></i> Skills
-                            </a>
-                        </li>
-                        <li className="nav__item">
-                            <a href="#services" className={`nav__link ${activeSection === 'services' ? 'active' : ''}`} onClick={() => handleClick('services')}>
-                                <i className="uil uil-briefcase-alt nav__icon"></i> Services
                             </a>
                         </li>
                         <li className="nav__item">

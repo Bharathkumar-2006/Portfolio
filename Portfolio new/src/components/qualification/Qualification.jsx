@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./qualification.css";
 
@@ -57,13 +57,13 @@ const Qualification = () => {
                 <div className="qualification__data">
                   <div>
                     <h3 className="qualification__title">
-                      BSc (Hons) Computer Science
+                      BE Computer Science and Engineering
                     </h3>
                     <span className="qualification__subtitle">
-                      University of Bedfordshire
+                      Sri Eshwar College of Engineering
                     </span>
                     <div className="qualification__calender">
-                      <i className="uil uil-calender-alt"></i> 2025 - Present
+                      <i className="uil uil-calender-alt"></i> 2023 - Present
                     </div>
                   </div>
                   <div>
@@ -80,47 +80,30 @@ const Qualification = () => {
                   </div>
                   <div>
                     <h3 className="qualification__title">
-                      Higher National Diploma
+                      HSC
                     </h3>
                     <span className="qualification__subtitle">
-                      Institute Of Software Engineering
+                      Nyruthi Vidhya Bhavan Matric Higher Secondary School
                     </span>
                     <div className="qualification__calender">
-                      <i className="uil uil-calender-alt"></i> 2023 - 2025
+                      <i className="uil uil-calender-alt"></i> 2021 - 2023
                     </div>
                   </div>
                 </div>
 
                 <div className="qualification__data">
                   <div>
-                    <h3 className="qualification__title">Photography</h3>
+                    <h3 className="qualification__title">SSLC</h3>
                     <span className="qualification__subtitle">
-                      Image Art Academy
+                    Nyruthi Vidhya Bhavan Matric Higher Secondary School
                     </span>
                     <div className="qualification__calender">
-                      <i className="uil uil-calender-alt"></i> 2021 - 2022
+                      <i className="uil uil-calender-alt"></i> 2021
                     </div>
                   </div>
                   <div>
                     <span className="qualification__rounder"></span>
                     <span className="qualification__line"></span>
-                  </div>
-                </div>
-
-                <div className="qualification__data">
-                  <div></div>
-                  <div>
-                    <span className="qualification__rounder"></span>
-                    <span className="qualification__line"></span>
-                  </div>
-                  <div>
-                    <h3 className="qualification__title">High School</h3>
-                    <span className="qualification__subtitle">
-                      All Saints' College
-                    </span>
-                    <div className="qualification__calender">
-                      <i className="uil uil-calender-alt"></i> 2007 - 2020
-                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -138,7 +121,7 @@ const Qualification = () => {
                 <div className="qualification__data">
                   <div>
                     <h3 className="qualification__title">
-                      Application Development
+                      A
                     </h3>
                     <span className="qualification__subtitle">
                       Academic Experience
@@ -150,56 +133,6 @@ const Qualification = () => {
                   <div>
                     <span className="qualification__rounder"></span>
                     <span className="qualification__line"></span>
-                  </div>
-                </div>
-
-                <div className="qualification__data">
-                  <div></div>
-                  <div>
-                    <span className="qualification__rounder"></span>
-                    <span className="qualification__line"></span>
-                  </div>
-                  <div>
-                    <h3 className="qualification__title">Ui Designer</h3>
-                    <span className="qualification__subtitle">
-                      Academic Experience
-                    </span>
-                    <div className="qualification__calender">
-                      <i className="uil uil-calender-alt"></i> 2023 - 2025
-                    </div>
-                  </div>
-                </div>
-
-                <div className="qualification__data">
-                  <div>
-                    <h3 className="qualification__title">Web Designer</h3>
-                    <span className="qualification__subtitle">
-                      Academic Experience{" "}
-                    </span>
-                    <div className="qualification__calender">
-                      <i className="uil uil-calender-alt"></i> 2023 - 2025
-                    </div>
-                  </div>
-                  <div>
-                    <span className="qualification__rounder"></span>
-                    <span className="qualification__line"></span>
-                  </div>
-                </div>
-
-                <div className="qualification__data">
-                  <div></div>
-                  <div>
-                    <span className="qualification__rounder"></span>
-                    <span className="qualification__line"></span>
-                  </div>
-                  <div>
-                    <h3 className="qualification__title">Photography</h3>
-                    <span className="qualification__subtitle">
-                      Studio Vivid EYE
-                    </span>
-                    <div className="qualification__calender">
-                      <i className="uil uil-calender-alt"></i> since 2021
-                    </div>
                   </div>
                 </div>
               </motion.div>
