@@ -1,30 +1,29 @@
-import {React} from 'react';
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter } from 'react-router-dom';
-import { ThemeProvider } from 'styled-components';
-import useDarkMode from 'use-dark-mode';
-import AppContext from './AppContext';
-import MainApp from './main';
-import GlobalStyles from './theme/GlobalStyles';
-import { lightTheme, darkTheme } from './theme/themes';
+import "./App.css";
+import Header from './components/header/Header';
+import Home from './components/home/Home';
+import Skills from './components/skills/Skills';
+import Work from './components/work/Work';
+import Qualification from './components/qualification/Qualification';
+import Contact from './components/contact/Contact';
+import Footer from './components/footer/Footer';
+import AnimatedCursor from 'react-animated-cursor';
 
-function App() {
-  window.matchMedia = null;
-  const darkMode = useDarkMode(true);
+const App = () => {
 
-  return (
-    <AppContext.Provider value={{ darkMode }}>
-      <ThemeProvider theme={darkMode.value ? darkTheme : lightTheme}>
-        <GlobalStyles />
-        <div className="App">
-          <BrowserRouter>
-            <MainApp />
-          </BrowserRouter>
-        </div>
-      </ThemeProvider>
-    </AppContext.Provider>
-  );
+    return (
+        <>
+            <Header/>
+            <main className='main'>
+                <AnimatedCursor/>
+                <Home/>
+                <Qualification/>
+                <Skills/>
+                <Work/>
+                <Contact/>
+                <Footer/>
+            </main>
+        </>
+    )
 }
 
-export default App;
+export default App

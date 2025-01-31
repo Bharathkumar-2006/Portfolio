@@ -1,9 +1,9 @@
 {
-  "homepage": "https://github.com/Bharathkumar-2006/Portfolio",
-  "name": "my-portfolio",
+  "name": "portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://chamithKavinda.github.io/Portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -13,9 +13,12 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "lucide-react": "^0.471.1",
-    "my-portfolio": "file:",
+    "axios": "^1.7.9",
+    "cra-template": "^1.2.0",
+    "framer-motion": "^12.0.5",
+    "portfolio": "file:",
     "react": "^18.3.1",
+    "react-animated-cursor": "^2.11.2",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
