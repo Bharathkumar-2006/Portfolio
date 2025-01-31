@@ -6,15 +6,14 @@ import Work from './components/work/Work';
 import Qualification from './components/qualification/Qualification';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
-import AnimatedCursor from 'react-animated-cursor';
+
 
 const App = () => {
 
     return (
         <>
             <Header/>
-            <main className='main'>
-                <AnimatedCursor/>
+            <main className='main'>                
                 <Home/>
                 <Qualification/>
                 <Skills/>
